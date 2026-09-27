@@ -1,76 +1,9 @@
-/* Presentación principal */
+/* Estructura principal de la aplicación */
 
-.presentacion {
-    display: grid;
+#root {
+    min-height: 100vh;
+}
+
+.contenido-principal {
     min-height: calc(100vh - 88px);
-    place-items: center;
-    padding: 32px;
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(178, 102, 121, 0.28),
-            transparent 32%
-        ),
-        #f8fbca;
-}
-
-.presentacion__contenido {
-    width: min(100%, 760px);
-    padding: clamp(48px, 8vw, 96px);
-    border: 1px solid rgba(101, 28, 50, 0.25);
-    background-color: rgba(248, 251, 202, 0.78);
-    box-shadow: 18px 18px 0 #651c32;
-    text-align: center;
-}
-
-.presentacion__etiqueta {
-    margin-bottom: 24px;
-    color: #651c32;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-}
-
-.presentacion__titulo {
-    margin: 0;
-    color: #111111;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(4rem, 14vw, 8rem);
-    font-weight: 400;
-    letter-spacing: -0.06em;
-    line-height: 0.85;
-}
-
-.presentacion__descripcion {
-    max-width: 520px;
-    margin: 32px auto;
-    color: #3d2630;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.6;
-}
-
-.presentacion__estado {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background-color: #651c32;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-@media (max-width: 600px) {
-    .presentacion {
-        min-height: calc(100vh - 154px);
-        padding: 24px;
-        
-    }
-
-    .presentacion__contenido {
-        padding: 56px 24px;
-        box-shadow: 10px 10px 0 #651c32;
-    }
 }

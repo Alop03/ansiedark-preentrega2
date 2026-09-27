@@ -1,18 +1,17 @@
 import Navbar from "./components/Navbar"
-import BrandPresentation from "./components/BrandPresentation"
+import ItemListContainer from "./components/ItemListContainer"
 import "./App.css"
 
-// Organiza la navegación y el contenido principal de la aplicación.
+// Compone la navegación y el contenido principal del e-commerce.
 function App() {
     return (
         <>
             <Navbar />
 
-            <main
-                id="inicio"
-                className="presentacion"
-            >
-                <BrandPresentation />
+            <main className="contenido-principal">
+                <ItemListContainer
+                    greeting="Tu selección mensual empieza acá."
+                />
             </main>
         </>
     )

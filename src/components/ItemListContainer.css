@@ -1,0 +1,94 @@
+/* Contenedor inicial del futuro catálogo */
+
+.catalogo {
+    display: grid;
+    min-height: calc(100vh - 88px);
+    padding: clamp(40px, 7vw, 96px) 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 84% 18%,
+            rgba(178, 102, 121, 0.35),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbca 0%,
+            #f8fbca 68%,
+            #eef1b4 100%
+        );
+    place-items: center;
+}
+
+.catalogo__contenido {
+    position: relative;
+    width: min(100%, 900px);
+    padding: clamp(56px, 9vw, 112px) clamp(28px, 8vw, 96px);
+    border: 1px solid rgba(101, 28, 50, 0.3);
+    background-color: rgba(248, 251, 202, 0.78);
+    box-shadow: 18px 18px 0 #651c32;
+    text-align: center;
+}
+
+.catalogo__contenido::before {
+    position: absolute;
+    top: -18px;
+    left: clamp(24px, 8vw, 80px);
+    width: 72px;
+    height: 36px;
+    background-color: #b26679;
+    content: "";
+    transform: rotate(-4deg);
+}
+
+.catalogo__etiqueta {
+    margin-bottom: 24px;
+    color: #651c32;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.catalogo__titulo {
+    max-width: 720px;
+    margin-inline: auto;
+    color: #111111;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 8vw, 6.5rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+}
+
+.catalogo__descripcion {
+    max-width: 520px;
+    margin: 32px auto;
+    color: #3d2630;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    line-height: 1.65;
+}
+
+.catalogo__detalle {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid #651c32;
+    border-radius: 999px;
+    color: #651c32;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+    .catalogo {
+        min-height: calc(100vh - 154px);
+        padding: 48px 24px;
+    }
+
+    .catalogo__contenido {
+        padding: 64px 24px;
+        box-shadow: 10px 10px 0 #651c32;
+    }
+}
