@@ -1,8 +1,8 @@
-# Ansiedark E-commerce
+# Ansiedark — Pre-entrega 2
 
-Aplicación web de comercio electrónico para Ansiedark, una joyería por suscripción dirigida a personas que hacen de su identidad una estética.
+Segunda etapa del e-commerce de Ansiedark, una joyería por suscripción dirigida a personas que hacen de su identidad una estética.
 
-El proyecto se desarrolla de forma incremental como parte del curso de React JS de Coderhouse. En las próximas etapas incorporará catálogo, categorías, detalle de productos, carrito de compras, autenticación, Firebase y generación de órdenes.
+En esta instancia se desarrolló el layout inicial de la tienda mediante componentes funcionales de React, incorporando una navegación por categorías, un indicador visual del carrito y un contenedor principal que recibe contenido mediante props.
 
 ## Tecnologías utilizadas
 
@@ -10,21 +10,40 @@ El proyecto se desarrolla de forma incremental como parte del curso de React JS 
 - Vite
 - JavaScript
 - CSS
+- React Icons
 - Oxlint
 - Git y GitHub
+
+## Componentes principales
+
+### Navbar
+
+Contiene la identidad de Ansiedark y las categorías comerciales del catálogo:
+
+- Anillos
+- Collares
+- Pulseras
+
+### CartWidget
+
+Representa el acceso visual al futuro carrito de compras. Actualmente muestra una cantidad fija de productos, que será reemplazada por información dinámica en próximas etapas.
+
+### ItemListContainer
+
+Funciona como contenedor principal del futuro catálogo. Recibe el mensaje de bienvenida mediante la prop `greeting`.
 
 ## Instalación
 
 Clonar el repositorio:
 
 ```bash
-git clone https://github.com/Alop03/ansiedark-ecommerce.git
+git clone https://github.com/Alop03/ansiedark-preentrega2.git
 ```
 
-Ingresar en la carpeta del proyecto:
+Ingresar en la carpeta:
 
 ```bash
-cd ansiedark-ecommerce
+cd ansiedark-preentrega2
 ```
 
 Instalar las dependencias:
@@ -41,32 +60,40 @@ npm run dev
 
 ## Comandos disponibles
 
+Ejecutar el entorno de desarrollo:
+
 ```bash
 npm run dev
 ```
 
-Inicia el servidor local de desarrollo.
-
-```bash
-npm run build
-```
-
-Genera la versión de producción.
+Analizar el código:
 
 ```bash
 npm run lint
 ```
 
-Analiza el código para detectar errores.
+Generar la versión de producción:
 
-## Estructura inicial
+```bash
+npm run build
+```
 
-- `src/App.jsx`: organiza la vista principal.
-- `src/components/BrandPresentation.jsx`: presenta la identidad de Ansiedark.
-- `src/App.css`: contiene los estilos de la presentación.
-- `src/index.css`: contiene la configuración global de estilos.
-- `public/`: contiene los archivos públicos de la aplicación.
+## Estructura relevante
+
+```text
+src/
+├── components/
+│   ├── CartWidget.jsx
+│   ├── ItemListContainer.css
+│   ├── ItemListContainer.jsx
+│   ├── Navbar.css
+│   └── Navbar.jsx
+├── App.css
+├── App.jsx
+├── index.css
+└── main.jsx
+```
 
 ## Estado del proyecto
 
-Pre-entrega 1: estructura base creada con React y Vite.
+Pre-entrega 2: layout inicial y componentes del e-commerce.
